@@ -11,7 +11,7 @@ const Login= () => {
 const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await axios.post('https://upskill31-backend.onrender.com/login', { username, password });
+        const response = await axios.post('https://upskill31-backend2.onrender.com/login', { username, password });
         localStorage.setItem('token', response.data.token);
         alert('Login successful');
         navigate('/protected')

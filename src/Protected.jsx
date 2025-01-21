@@ -8,7 +8,7 @@ const Protected = () => {
         console.log('Fetching protected data')
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('https://upskill31-backend.onrender.com/protected', {
+            const response = await axios.get('https://upskill31-backend2.onrender.com/protected', {
                 headers: { Authorization: token }
             });
             setMessage(response.data.message);
