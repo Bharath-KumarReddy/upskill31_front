@@ -5,6 +5,7 @@ const Protected = () => {
     const [message, setMessage] = useState('');
 
     const fetchProtectedData = async () => {
+        console.log('Fetching protected data')
         try {
             const token = localStorage.getItem('token');
             const response = await axios.get('https://upskill31-backend.onrender.com/protected', {
@@ -12,6 +13,7 @@ const Protected = () => {
             });
             setMessage(response.data.message);
         } catch (error) {
+            alert("Error on fetch,check token in console,application")
             console.error('Access denied', error);
         }
     };
